@@ -60,7 +60,6 @@ const SkipLink = styled.a`
 const SiteLayout = () => {
   return (
     <Page>
-      <SkipLink href="#main-content">Skip to content</SkipLink>
       <Header />
       <main id="main-content">
         <Outlet />

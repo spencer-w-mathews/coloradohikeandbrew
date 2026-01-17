@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import ButtonLink from '../components/common/Button'
 import logo from '../assets/logo.png'
 import Container from '../components/common/Container'
+import { Link } from 'react-router-dom'
 
 const Section = styled.section`
   position: relative;
@@ -22,11 +23,11 @@ const Glow = styled.div`
 
 const MountainLine = styled(motion.svg)`
   position: absolute;
-  width: 1200px;
-  max-width: 160%;
+  width: 1400px;
+  max-width: 180%;
   height: auto;
   left: 50%;
-  bottom: 18%;
+  bottom: 20%;
   transform: translateX(-50%);
   z-index: 0;
   opacity: 0.4;
@@ -63,19 +64,7 @@ const Lead = styled(motion.p)`
   max-width: 620px;
 `
 
-const Actions = styled(motion.div)`
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  justify-content: center;
-`
 
-const OutlineButton = styled(ButtonLink)`
-  background: transparent;
-  color: ${({ theme }) => theme.colors.canyon};
-  border: 1px solid ${({ theme }) => theme.colors.canyon};
-  box-shadow: none;
-`
 
 const Highlight = styled(motion.div)`
   margin-top: 12px;
@@ -102,23 +91,6 @@ const TrailStamp = styled(motion.div)`
   font-size: 0.85rem;
 `
 
-const BadgeRow = styled(motion.div)`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 20px;
-`
-
-const Badge = styled.span`
-  padding: 8px 14px;
-  border-radius: ${({ theme }) => theme.radius.pill};
-  background: ${({ theme }) => theme.colors.surface};
-  border: 1px solid rgba(179, 88, 58, 0.18);
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.canyon};
-  font-size: 0.85rem;
-`
-
 
 const HeroSection = () => {
   return (
@@ -134,25 +106,25 @@ const HeroSection = () => {
         aria-hidden="true"
       >
         <motion.path
-          d="M20 220 L180 90 L320 170 L480 60 L620 150 L720 85 L860 160 L1040 70 L1180 150"
+          d="M20 230 L180 60 L320 170 L480 30 L620 150 L720 60 L860 170 L1040 40 L1180 150"
           stroke="#2D5A4B"
           strokeWidth="3"
           strokeLinecap="round"
         />
         <motion.path
-          d="M30 235 L210 135 L360 205 L460 130 L560 210 L700 120 L820 205 L1000 130 L1170 215"
+          d="M30 240 L210 120 L360 215 L460 110 L560 220 L700 105 L820 215 L1000 120 L1170 225"
           stroke="#B3583A"
           strokeWidth="2"
           strokeLinecap="round"
         />
         <motion.path
-          d="M420 140 L480 60 L540 140"
+          d="M420 150 L480 30 L540 150"
           stroke="#2D5A4B"
           strokeWidth="2"
           strokeLinecap="round"
         />
         <motion.path
-          d="M710 150 L760 85 L820 150"
+          d="M710 160 L760 50 L820 160"
           stroke="#B3583A"
           strokeWidth="2"
           strokeLinecap="round"
@@ -188,27 +160,11 @@ const HeroSection = () => {
         >
           Est. 2024 · Colorado
         </TrailStamp>
-        <BadgeRow
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.4 }}
-        >
-          <Badge>Weekly trail drops</Badge>
-          <Badge>Local brewery love</Badge>
-          <Badge>Couple-run channel</Badge>
-        </BadgeRow>
-        <Actions
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.5 }}
-        >
-          <ButtonLink href="#videos" whileTap={{ scale: 0.98 }}>
+
+          <ButtonLink  as={Link} to="/videos" whileTap={{ scale: 0.98 }}>
             Watch the latest trek
           </ButtonLink>
-          <OutlineButton href="#journal" whileTap={{ scale: 0.98 }}>
-            Read the journal
-          </OutlineButton>
-        </Actions>
+
         <Highlight
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}

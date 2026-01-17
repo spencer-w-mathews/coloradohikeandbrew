@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../../assets/logo.png'
@@ -17,7 +18,7 @@ const Inner = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0px;
+  padding: 18px 10px;
   gap: 16px;
 `
 
@@ -43,6 +44,10 @@ const Nav = styled.nav`
   gap: 18px;
   align-items: center;
   flex-wrap: wrap;
+
+  @media (max-width: 900px) {
+    display: none;
+  }
 `
 
 const NavItem = styled(NavLink)`
@@ -60,7 +65,66 @@ const NavItem = styled(NavLink)`
   }
 `
 
+const MobileToggle = styled.button`
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: ${({ theme }) => theme.radius.pill};
+  border: 1px solid rgba(22, 32, 51, 0.15);
+  background: ${({ theme }) => theme.colors.surface};
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  @media (max-width: 900px) {
+    display: inline-flex;
+  }
+`
+
+const ToggleIcon = styled.span<{ $open: boolean }>`
+  position: relative;
+  width: 20px;
+  height: 2px;
+  background: ${({ $open, theme }) => ($open ? 'transparent' : theme.colors.ink)};
+  transition: background 0.2s ease;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 20px;
+    height: 2px;
+    background: ${({ theme }) => theme.colors.ink};
+    transition: transform 0.2s ease;
+  }
+
+  &::before {
+    transform: ${({ $open }) => ($open ? 'translateY(0) rotate(45deg)' : 'translateY(-6px)')};
+  }
+
+  &::after {
+    transform: ${({ $open }) => ($open ? 'translateY(0) rotate(-45deg)' : 'translateY(6px)')};
+  }
+`
+
+const MobileMenu = styled.div<{ $open: boolean }>`
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 24px 28px;
+  border-top: 1px solid rgba(154, 91, 60, 0.12);
+  background: rgba(245, 243, 235, 0.96);
+  backdrop-filter: blur(12px);
+
+  @media (max-width: 900px) {
+    display: ${({ $open }) => ($open ? 'flex' : 'none')};
+  }
+`
+
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+
   return (
     <Wrapper
       initial={{ y: -16, opacity: 0 }}
@@ -89,7 +153,32 @@ const Header = () => {
             Connect
           </NavItem>
         </Nav>
+        <MobileToggle
+          type="button"
+          aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isOpen}
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <ToggleIcon $open={isOpen} />
+        </MobileToggle>
       </Inner>
+      <MobileMenu $open={isOpen}>
+        <NavItem to="/hikes" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
+          Hikes
+        </NavItem>
+        <NavItem to="/brews" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
+          Brews
+        </NavItem>
+        <NavItem to="/videos" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
+          Videos
+        </NavItem>
+        <NavItem to="/journal" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
+          Journal
+        </NavItem>
+        <NavItem to="/contact" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
+          Connect
+        </NavItem>
+      </MobileMenu>
     </Wrapper>
   )
 }

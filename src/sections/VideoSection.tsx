@@ -2,7 +2,6 @@ import { motion } from 'framer-motion'
 import styled from 'styled-components'
 import ButtonLink from '../components/common/Button'
 import Container from '../components/common/Container'
-import { Eyebrow, Title, Subtitle } from '../components/common/SectionHeading'
 import { videoFeatures } from '../data/content'
 
 const Section = styled.section`
@@ -61,11 +60,6 @@ const VideoSection = () => {
   return (
     <Section id="videos">
       <Container>
-        <Eyebrow>Videos</Eyebrow>
-        <Title>Trail-to-tap episodes</Title>
-        <Subtitle>
-          We blend cinematic hikes, brewery stories, and cozy recap conversations. New videos land every week.
-        </Subtitle>
         <Layout>
           <Player
             initial={{ opacity: 0, y: 20 }}
