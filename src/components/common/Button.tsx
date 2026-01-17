@@ -8,7 +8,7 @@ const sharedStyles = css`
   gap: 10px;
   padding: 14px 24px;
   border-radius: ${({ theme }) => theme.radius.pill};
-  background: ${({ theme }) => theme.colors.canyon};
+  background: ${({ theme }) => theme.colors.meadow};
   color: #000;
   font-weight: 600;
   letter-spacing: 0.02em;

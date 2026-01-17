@@ -64,23 +64,11 @@ const Lead = styled(motion.p)`
   max-width: 620px;
 `
 
-
-
-const Highlight = styled(motion.div)`
-  margin-top: 12px;
-  padding: 20px 26px;
-  border-radius: ${({ theme }) => theme.radius.lg};
-  background: rgba(255, 255, 255, 0.75);
-  border: 1px solid rgba(179, 88, 58, 0.18);
-  box-shadow: ${({ theme }) => theme.shadow.soft};
-  max-width: 680px;
-`
-
 const TrailStamp = styled(motion.div)`
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  margin-top: 18px;
+  margin-top: 5px;
   padding: 10px 16px;
   border-radius: ${({ theme }) => theme.radius.pill};
   background: rgba(47, 90, 75, 0.12);
@@ -97,7 +85,7 @@ const HeroSection = () => {
     <Section id="top">
       <Glow />
       <MountainLine
-        viewBox="0 0 1200 260"
+        viewBox="0 0 1200 360"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         initial={{ pathLength: 0, opacity: 0 }}
@@ -158,20 +146,12 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
         >
-          Est. 2024 · Colorado
+          Est. 2026 · Colorado
         </TrailStamp>
 
-          <ButtonLink  as={Link} to="/videos" whileTap={{ scale: 0.98 }}>
+          <ButtonLink  as={Link} to="/videos" whileTap={{ scale: 0.98 }} style={{backgroundColor:'rgba(14, 198, 72, 0.5)', borderRadius: 5}}>
             Watch the latest trek
           </ButtonLink>
-
-        <Highlight
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.6 }}
-        >
-          <strong>Now filming:</strong> Alpine lake sunrise + pine-scented lagers + a cozy cabin recap.
-        </Highlight>
       </Inner>
     </Section>
   )

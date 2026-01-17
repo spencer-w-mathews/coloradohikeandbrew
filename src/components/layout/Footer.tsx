@@ -11,7 +11,11 @@ const Wrapper = styled.footer`
 const Inner = styled(Container)`
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 1fr;
+
+  @media (min-width: 900px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 `
 
 const Brand = styled.div`
@@ -20,13 +24,16 @@ const Brand = styled.div`
   gap: 12px;
   font-family: ${({ theme }) => theme.fonts.heading};
   font-size: 1.6rem;
-  margin-bottom: 8px;
 `
 
 const LogoMark = styled.img`
   width: 44px;
   height: 44px;
   border-radius: 14px;
+`
+
+const BrandRow = styled.div`
+  grid-column: 1 / -1;
 `
 
 const Small = styled.p`
@@ -38,11 +45,13 @@ const Footer = () => {
   return (
     <Wrapper>
       <Inner>
-        <div>
+        <BrandRow>
           <Brand>
             <LogoMark src={logo} alt="Colorado Hike + Brew logo" />
             Colorado Hike + Brew
           </Brand>
+        </BrandRow>
+        <div>
           <Small>High-alpine adventures, local pours, and the stories between.</Small>
         </div>
         <div>
