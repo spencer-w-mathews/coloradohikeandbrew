@@ -47,8 +47,8 @@ const Footer = () => {
       <Inner>
         <BrandRow>
           <Brand>
-            <LogoMark src={logo} alt="Colorado Hike + Brew logo" />
-            Colorado Hike + Brew
+            <LogoMark src={logo} alt="Colorado Hike & Brew logo" />
+            Colorado Hike & Brew
           </Brand>
         </BrandRow>
         <div>

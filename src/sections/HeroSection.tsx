@@ -125,7 +125,7 @@ const HeroSection = () => {
       <Inner>
         <LogoBadge
           src={logo}
-          alt="Colorado Hike + Brew logo"
+          alt="Colorado Hike & Brew logo"
           initial={{ opacity: 0, scale: 0.92 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
@@ -135,7 +135,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
         >
-          Colorado Hike + Brew
+          Colorado Hike & Brew
         </Title>
         <Lead
           initial={{ opacity: 0, y: 20 }}

@@ -136,8 +136,8 @@ const Header = () => {
     >
       <Inner>
         <Logo to="/">
-          <LogoMark src={logo} alt="Colorado Hike + Brew logo" />
-          Colorado Hike + Brew
+          <LogoMark src={logo} alt="Colorado Hike & Brew logo" />
+          Colorado Hike & Brew
         </Logo>
         <Nav>
           <NavItem to="/hikes" className={({ isActive }) => (isActive ? 'active' : '')}>
