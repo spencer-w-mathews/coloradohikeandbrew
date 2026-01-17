@@ -4,7 +4,11 @@ import { Eyebrow, Title, Subtitle } from '../components/common/SectionHeading'
 import NewsletterSection from '../sections/NewsletterSection'
 
 const Section = styled.section`
-  padding: 20px 0 60px;
+  padding: calc(20px + 84px) 0 60px;
+
+  @media (min-width: 900px) {
+    padding-top: calc(20px + 96px);
+  }
 `
 
 const Card = styled.div`

@@ -5,7 +5,11 @@ import VideoSection from '../sections/VideoSection'
 import NewsletterSection from '../sections/NewsletterSection'
 
 const Hero = styled.section`
-  padding: 20px 0 0;
+  padding: calc(20px + 84px) 0 0;
+
+  @media (min-width: 900px) {
+    padding-top: calc(20px + 96px);
+  }
 `
 
 const VideosPage = () => {

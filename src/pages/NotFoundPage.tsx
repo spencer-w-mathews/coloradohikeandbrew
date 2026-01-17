@@ -4,7 +4,11 @@ import { Link } from 'react-router-dom'
 import { ButtonLink } from '../components/common/Button'
 
 const Section = styled.section`
-  padding: 20px 0 120px;
+  padding: calc(20px + 84px) 0 120px;
+
+  @media (min-width: 900px) {
+    padding-top: calc(20px + 96px);
+  }
   text-align: center;
 `
 

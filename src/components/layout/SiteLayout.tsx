@@ -34,8 +34,7 @@ const Page = styled.div`
   }
 
   main,
-  footer,
-  header {
+  footer {
     position: relative;
     z-index: 1;
   }

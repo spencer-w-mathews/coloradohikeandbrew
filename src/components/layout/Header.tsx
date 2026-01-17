@@ -6,12 +6,15 @@ import logo from '../../assets/logo.png'
 import Container from '../common/Container'
 
 const Wrapper = styled(motion.header)`
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   background: rgba(245, 239, 232, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(154, 91, 60, 0.12);
+  border-radius: 0 0 15px 15px;
 `
 
 const Inner = styled(Container)`

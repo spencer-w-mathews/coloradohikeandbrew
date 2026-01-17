@@ -7,8 +7,12 @@ import { Link } from 'react-router-dom'
 
 const Section = styled.section`
   position: relative;
-  padding: 30px 0 90px;
+  padding: calc(30px + 84px) 0 90px;
   overflow: hidden;
+
+  @media (min-width: 900px) {
+    padding-top: calc(30px + 96px);
+  }
 `
 
 const Glow = styled.div`
@@ -149,7 +153,7 @@ const HeroSection = () => {
           Est. 2026 · Colorado
         </TrailStamp>
 
-          <ButtonLink  as={Link} to="/videos" whileTap={{ scale: 0.98 }} style={{backgroundColor:'rgba(14, 198, 72, 0.5)', borderRadius: 5}}>
+          <ButtonLink  as={Link} to="/videos" whileTap={{ scale: 0.98 }} style={{ borderRadius: 5}}>
             Watch the latest trek
           </ButtonLink>
       </Inner>
