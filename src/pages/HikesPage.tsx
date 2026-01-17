@@ -5,7 +5,7 @@ import { Eyebrow, Title, Subtitle } from '../components/common/SectionHeading'
 import { hikes } from '../data/content'
 
 const Section = styled.section`
-  padding: calc(0px + 84px) 0 110px;
+  padding: calc(20px + 84px) 0 110px;
 
   @media (min-width: 900px) {
     padding-top: calc(20px + 96px);
