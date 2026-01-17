@@ -4,7 +4,7 @@ import { Button } from '../components/common/Button'
 import Container from '../components/common/Container'
 
 const Section = styled.section`
-  padding: 80px 0 110px;
+  padding: 0px 0 110px;
 `
 
 const Card = styled(motion.div)`

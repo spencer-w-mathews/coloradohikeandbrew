@@ -5,7 +5,7 @@ import { Eyebrow, Title, Subtitle } from '../components/common/SectionHeading'
 import { journalEntries } from '../data/content'
 
 const Section = styled.section`
-  padding: 90px 0;
+  padding: 20px 0;
   background: ${({ theme }) => theme.colors.surface};
 `
 

@@ -5,7 +5,7 @@ import { Eyebrow, Title, Subtitle } from '../components/common/SectionHeading'
 import { beerReviews } from '../data/content'
 
 const Section = styled.section`
-  padding: 40px 0;
+  padding: 20px 0;
   background: ${({ theme }) => theme.colors.haze};
 `
 
