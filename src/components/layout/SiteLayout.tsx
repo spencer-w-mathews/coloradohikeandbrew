@@ -40,27 +40,9 @@ const Page = styled.div`
   }
 `
 
-const SkipLink = styled.a`
-  position: absolute;
-  top: -40px;
-  left: 16px;
-  padding: 10px 16px;
-  background: ${({ theme }) => theme.colors.sun};
-  color: ${({ theme }) => theme.colors.ink};
-  border-radius: ${({ theme }) => theme.radius.pill};
-  font-weight: 600;
-  z-index: 20;
-  transition: top 0.2s ease;
-
-  &:focus {
-    top: 16px;
-  }
-`
-
 const SiteLayout = () => {
   return (
     <Page>
-      <SkipLink href="#main-content">Skip to content</SkipLink>
       <Header />
       <main id="main-content">
         <Outlet />
