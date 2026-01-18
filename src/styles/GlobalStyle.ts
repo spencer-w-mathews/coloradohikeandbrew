@@ -12,7 +12,11 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     font-family: ${({ theme }) => theme.fonts.body};
-    background: ${({ theme }) => theme.colors.background};
+    background: linear-gradient(rgba(253, 243, 229, 0.92), rgba(253, 243, 229, 0.96)),
+      url('/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: ${({ theme }) => theme.colors.ink};
     line-height: 1.6;
   }
