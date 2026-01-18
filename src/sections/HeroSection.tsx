@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import ButtonLink from '../components/common/Button'
 import logo from '../assets/logo.png'
 import Container from '../components/common/Container'
-import { Link } from 'react-router-dom'
 
 const Section = styled.section`
   position: relative;
@@ -158,7 +157,14 @@ const HeroSection = () => {
         >
           Est. 2026 · Colorado
         </TrailStamp>
-        <HeroButton as={Link} to="/videos" whileTap={{ scale: 0.98 }} style={{ borderRadius: 5 }}>
+        <HeroButton
+          as="a"
+          href="https://www.youtube.com/channel/UChPbdRyu96oxopPtwWuuW8g"
+          target="_blank"
+          rel="noreferrer"
+          whileTap={{ scale: 0.98 }}
+          style={{ borderRadius: 5 }}
+        >
           Watch the latest trek
         </HeroButton>
       </Inner>

@@ -166,18 +166,18 @@ const Header = () => {
         </MobileToggle>
       </Inner>
       <MobileMenu $open={isOpen}>
+        <NavItem to="/videos" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
+          Videos
+        </NavItem>
         <NavItem to="/hikes" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
           Hikes
         </NavItem>
         <NavItem to="/brews" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
           Brews
         </NavItem>
-        <NavItem to="/videos" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
-          Videos
-        </NavItem>
-        <NavItem to="/journal" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
-          Journal
-        </NavItem>
+        <NavItem to="/gear" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
+            Gear
+          </NavItem>
         <NavItem to="/contact" className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setIsOpen(false)}>
           Connect
         </NavItem>
