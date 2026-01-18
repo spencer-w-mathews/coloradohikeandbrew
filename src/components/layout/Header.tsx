@@ -140,17 +140,17 @@ const Header = () => {
           Colorado Hike & Brew
         </Logo>
         <Nav>
+          <NavItem to="/videos" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Videos
+          </NavItem>
           <NavItem to="/hikes" className={({ isActive }) => (isActive ? 'active' : '')}>
             Hikes
           </NavItem>
           <NavItem to="/brews" className={({ isActive }) => (isActive ? 'active' : '')}>
             Brews
           </NavItem>
-          <NavItem to="/videos" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Videos
-          </NavItem>
-          <NavItem to="/journal" className={({ isActive }) => (isActive ? 'active' : '')}>
-            Journal
+          <NavItem to="/gear" className={({ isActive }) => (isActive ? 'active' : '')}>
+            Gear
           </NavItem>
           <NavItem to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
             Connect

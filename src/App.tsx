@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import SiteLayout from './components/layout/SiteLayout'
 import BrewsPage from './pages/BrewsPage'
 import ContactPage from './pages/ContactPage'
+import GearPage from './pages/GearPage'
 import HikeDetailPage from './pages/HikeDetailPage'
 import HikesPage from './pages/HikesPage'
 import HomePage from './pages/HomePage'
@@ -17,6 +18,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/hikes" element={<HikesPage />} />
           <Route path="/hikes/:slug" element={<HikeDetailPage />} />
+          <Route path="/gear" element={<GearPage />} />
           <Route path="/brews" element={<BrewsPage />} />
           <Route path="/videos" element={<VideosPage />} />
           <Route path="/journal" element={<JournalPage />} />

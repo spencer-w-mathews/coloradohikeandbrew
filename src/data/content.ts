@@ -221,3 +221,48 @@ export const beerReviews = [
     rating: 4,
   },
 ]
+
+export const gearItems = [
+  {
+    name: 'Ridgecrest 35L Daypack',
+    category: 'Packs',
+    description: 'Lightweight carry with room for layers, snacks, and a compact camera kit.',
+    highlight: 'Airy mesh back panel and quick-access trail pocket.',
+    link: 'https://example.com/affiliate/ridgecrest-35l',
+  },
+  {
+    name: 'Alpine Trail Runner GTX',
+    category: 'Footwear',
+    description: 'Grippy outsole for rocky climbs with waterproof protection for spring runoff.',
+    highlight: 'Breaks in fast and stays stable on scree.',
+    link: 'https://example.com/affiliate/alpine-trail-runner',
+  },
+  {
+    name: 'Golden Hour Shell Jacket',
+    category: 'Layers',
+    description: 'Windproof shell we toss on at exposed ridgelines and summit snacks.',
+    highlight: 'Packs down to a grapefruit and vents easily.',
+    link: 'https://example.com/affiliate/golden-hour-shell',
+  },
+  {
+    name: 'Summit Glow Headlamp 400',
+    category: 'Essentials',
+    description: 'Reliable early-start light with a wide beam for pre-dawn switchbacks.',
+    highlight: 'USB-C rechargeable with a lock mode for packs.',
+    link: 'https://example.com/affiliate/summit-glow-headlamp',
+  },
+  {
+    name: 'Creekside Filter Bottle',
+    category: 'Hydration',
+    description: 'Trail-safe filter bottle that keeps water weight down on long loops.',
+    highlight: 'Fast sip flow and easy-clean cartridge.',
+    link: 'https://example.com/affiliate/creekside-filter-bottle',
+  },
+  {
+    name: 'Campfire Compact Stove',
+    category: 'Camp',
+    description: 'Minimal stove for sunrise coffees and post-hike soups.',
+    highlight: 'Steady simmer and quick boil times.',
+    link: 'https://example.com/affiliate/campfire-compact-stove',
+  },
+]
