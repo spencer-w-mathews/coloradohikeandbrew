@@ -6,7 +6,6 @@ import GearPage from './pages/GearPage'
 import HikeDetailPage from './pages/HikeDetailPage'
 import HikesPage from './pages/HikesPage'
 import HomePage from './pages/HomePage'
-import JournalPage from './pages/JournalPage'
 import NotFoundPage from './pages/NotFoundPage'
 import VideosPage from './pages/VideosPage'
 
@@ -21,7 +20,6 @@ const App = () => {
           <Route path="/gear" element={<GearPage />} />
           <Route path="/brews" element={<BrewsPage />} />
           <Route path="/videos" element={<VideosPage />} />
-          <Route path="/journal" element={<JournalPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
